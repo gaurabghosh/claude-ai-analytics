@@ -1,0 +1,186 @@
+/* @theme analytics-dark */
+/* analytics-dark.css — Marp theme for AI Analytics System */
+/* Usage: add 'theme: analytics-dark' to Marp front matter */
+
+@import 'default';
+
+:root {
+  --color-background: #1A1A2E;
+  --color-background-code: #12122A;
+  --color-background-stripe: rgba(255,255,255,.03);
+  --color-foreground: #E8E8F0;
+  --color-dimmed: #9090A8;
+  --color-highlight: #4FC3F7;
+  --color-negative: #EF5350;
+  --color-positive: #66BB6A;
+  --color-gray: #555570;
+  --color-border: #2A2A45;
+
+  --font-body: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', Consolas, monospace;
+}
+
+section {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  font-size: 22px;
+  padding: 60px 72px;
+  line-height: 1.55;
+}
+
+/* ── HEADINGS ── */
+h1 {
+  color: var(--color-foreground);
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0 0 0.4em 0;
+  line-height: 1.2;
+  border: none;
+}
+
+h2 {
+  color: var(--color-highlight);
+  font-size: 1.35em;
+  font-weight: 600;
+  margin: 0.6em 0 0.3em 0;
+}
+
+h3 {
+  color: var(--color-dimmed);
+  font-size: 1.1em;
+  font-weight: 400;
+  margin: 0.4em 0 0.2em 0;
+}
+
+/* ── BODY TEXT ── */
+p {
+  color: var(--color-dimmed);
+  font-size: 0.85em;
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+strong {
+  color: var(--color-foreground);
+  font-weight: 600;
+}
+
+/* ── TABLES ── */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.78em;
+}
+
+th {
+  background: var(--color-border);
+  color: var(--color-highlight);
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+td {
+  color: var(--color-dimmed);
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── CODE ── */
+code {
+  background: var(--color-background-code);
+  color: var(--color-highlight);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 0.85em;
+  font-family: var(--font-mono);
+}
+
+pre {
+  background: var(--color-background-code);
+  border-left: 3px solid var(--color-highlight);
+  padding: 16px 20px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.78em;
+}
+
+/* ── IMAGES ── */
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* ── FOOTER / PAGINATION ── */
+footer {
+  color: var(--color-gray);
+  font-size: 0.65em;
+}
+
+section::after {
+  color: var(--color-gray);
+  font-size: 0.65em;
+}
+
+/* ── TITLE SLIDE ── */
+section.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+}
+
+section.title h1 {
+  font-size: 2.6em;
+  color: var(--color-foreground);
+  margin-bottom: 0.3em;
+}
+
+section.title h2 {
+  color: var(--color-highlight);
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+section.title p {
+  color: var(--color-dimmed);
+  font-size: 0.75em;
+  margin-top: 1.5em;
+}
+
+/* ── SECTION BREAK SLIDE ── */
+section.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #12122A;
+  border-left: 6px solid var(--color-highlight);
+}
+
+section.section h1 {
+  font-size: 2.2em;
+  color: var(--color-highlight);
+}
+
+section.section h3 {
+  color: var(--color-dimmed);
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+/* ── APPENDIX DIVIDER ── */
+section.appendix {
+  background: #0F0F1E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.appendix h1 {
+  color: var(--color-gray);
+  font-size: 1.8em;
+}
