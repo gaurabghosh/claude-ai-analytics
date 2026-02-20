@@ -113,10 +113,29 @@ Phase 5: CHARTS
 
 Phase 6: DELIVER
   → Run Deck Creator agent
-  → Output final .md (Marp) and render PDF to /outputs
+  → Output final .md (Marp) and render PDF to /outputs/[dataset-name]/
 ```
 
 When the pipeline halts at a checkpoint, explain what failed and what needs to be fixed before proceeding.
+
+---
+
+## 5a. File Organization by Dataset
+
+Every analysis is namespaced by dataset. Use the dataset filename (without extension, lowercased, hyphens for spaces) as the folder name.
+
+**Working files go under:** `/working/[dataset-name]/`
+- Example: `/working/amazon-sales/question-framing.md`
+
+**Output files go under:** `/outputs/[dataset-name]/`
+- Example: `/outputs/amazon-sales/amazon-sales-deck.marp.md`
+- Example: `/outputs/amazon-sales/amazon-sales-deck.pdf`
+- Example: `/outputs/amazon-sales/charts/beat-02-category-revenue.png`
+
+**Raw data stays in:** `/data/raw/[filename]`
+**Processed data goes in:** `/data/processed/[dataset-name]/`
+
+Do not mix working files from different datasets in the same folder. Each analysis run is self-contained within its dataset namespace.
 
 ---
 
