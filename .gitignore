@@ -1,1 +1,70 @@
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[codz]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+MANIFEST
+build/
+dist/
+.eggs/
+.installed.cfg
+
+# ── Virtual environments ──────────────────────────────────────────────────
+.env
+.envrc
+.venv
+env/
+venv/
+ENV/
+
+# ── Testing & coverage ────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# ── Type checkers ─────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────
+.ipynb_checkpoints
+profile_default/
+
+# ── Package managers ──────────────────────────────────────────────────────
+.pdm-python
+.pdm-build/
+.pixi
+__pypackages__/
+
+# ── macOS ─────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── IDEs ──────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Claude Code ───────────────────────────────────────────────────────────
 .claude/worktrees/
+.claude/settings.local.json
+
+# ── Project-specific ──────────────────────────────────────────────────────
+# Large or sensitive data files — commit only intentionally
+data/processed/
+*.csv.bak
+
+# Temp / scratch
+scratch/
+tmp/
