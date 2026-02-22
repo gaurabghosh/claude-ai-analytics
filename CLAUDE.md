@@ -63,7 +63,8 @@ Agents define WHAT gets done. Invoke them explicitly by name when needed.
 | Overtime Trend | `agents/overtime-trend.md` | To find patterns over time, seasonality, anomalies |
 | Root Cause Investigator | `agents/root-cause-investigator.md` | To drill into why a metric changed |
 | Opportunity Sizer | `agents/opportunity-sizer.md` | To quantify business impact of a finding |
-| Experiment Designer | `agents/experiment-designer.md` | To design A/B tests with power and decision rules |
+| Experiment Designer | `agents/experiment-designer.md` | To design A/B tests with power and decision rules (use for simple, isolated user-level tests) |
+| Experimentation Unit Designer | `agents/experimentation-unit-designer.md` | To select randomization unit (user / geo / transaction / cluster / switchback) and handle network effects, spillover, and marketplace interference |
 | Validation | `agents/validation.md` | To independently re-derive and verify key findings |
 | Story Architect | `agents/story-architect.md` | To design the narrative arc before any charting begins |
 | Narrative Coherence Reviewer | `agents/narrative-coherence-reviewer.md` | To validate story flow after the storyboard is complete |
@@ -89,7 +90,8 @@ Phase 2: EXPLORE (run in parallel where inputs allow)
   → Run Overtime Trend agent
   → Run Root Cause Investigator agent
   → Run Opportunity Sizer agent
-  → Run Experiment Designer agent (if applicable)
+  → Run Experimentation Unit Designer agent (if applicable; always before Experiment Designer when network effects, marketplace dynamics, or geo targeting are possible)
+  → Run Experiment Designer agent (after unit selection is confirmed; for simple isolated user-level tests, invoke directly)
 
   [CHECKPOINT 1: All explore agents complete before proceeding]
 

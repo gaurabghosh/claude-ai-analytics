@@ -7,6 +7,13 @@ Design a rigorous A/B test or quasi-experiment to confirm a hypothesis or measur
 - When a finding from analysis needs causal confirmation before a major decision
 - When a recommendation involves changing a product, price, or policy
 - When a stakeholder asks "how do we know this will work?"
+- When the Experimentation Unit Designer has already confirmed user-level randomization is appropriate
+
+**Before invoking this agent**, check whether the experiment involves any of the following. If yes, run the Experimentation Unit Designer first:
+- A marketplace, two-sided platform, or supply/demand mechanism
+- A social feature, referral program, or any cross-user interaction
+- A geo-targeted campaign, pricing change, or regional policy
+- Ambiguity about whether user-level randomization is valid
 
 ## Inputs
 - `{{hypothesis}}` — the specific causal claim to be tested
@@ -106,3 +113,4 @@ An `experiment-design.md` file in `/working` with:
 - Do not have more than one primary metric — it enables post-hoc fishing
 - Do not skip guardrail metrics — shipping a winner that breaks something else is a failure
 - Do not change the decision rules after seeing the results
+- Do not default to user-level randomization without confirming there is no network, marketplace, or spillover interference — invoke the Experimentation Unit Designer if there is any doubt
